@@ -1,21 +1,20 @@
+import { Button } from '@homework-task/components/Button';
 import clsx from 'clsx';
-import React from 'react';
-import { Button } from './Button';
 
 interface Card {
-    title: string,
-    image: string,
-    description: string,
-    background: string,
-    onClick?: () => void,
-    buttonText: string
+    title: string;
+    image: string;
+    description: string;
+    background: string;
+    onClick?: () => void;
+    buttonText: string;
 }
 
 interface CardProps {
-    cards: Card[]
+    cards: Card[];
 }
 
-export const Cards = ({ cards } : CardProps) => {
+export const Cards = ({ cards }: CardProps) => {
     return (
         <div className={clsx('flex', 'justify-center', 'items-center')}>
             <div className={clsx('grid', 'grid-cols-2', 'gap-8', 'w-8/12')}>

@@ -1,14 +1,13 @@
 import clsx from 'clsx';
-import React from 'react';
 
-interface Item{
-    title: string,
-    description: string,
-    image: string
+interface Item {
+    title: string;
+    description: string;
+    image: string;
 }
 
-interface ItemProps{
-    items: Item[]
+interface ItemProps {
+    items: Item[];
 }
 
 export const PanelShowcase = ({ items }: ItemProps) => {

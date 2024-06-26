@@ -1,8 +1,6 @@
-import React from "react";
-
 interface HeroProps {
-    title: string,
-    image: string
+    title: string;
+    image: string;
 }
 
 export const Hero = ({ title, image }: HeroProps) => {

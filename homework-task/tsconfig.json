@@ -1,21 +1,19 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module": "commonjs",
-      "strict": true,
-      "jsx": "react",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "baseUrl": "./src",
-      "paths": {
-        "@homework-task/*": ["*"]
-      },
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "noImplicitThis": true
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "es2019",
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "baseUrl": "./",
+    "paths": {
+      "@homework-task/*": ["src/*"]
     },
-    "include": ["src"]
-  }
-  
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
+}

@@ -8,7 +8,7 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            '@homework-task': '.'
-        }
-    }
+            '@homework-task': '/src',
+        },
+    },
 });

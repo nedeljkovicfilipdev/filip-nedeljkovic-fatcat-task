@@ -1,7 +1,6 @@
-import React from 'react';
 import './styles.css';
 
-import { Landing } from './components/landing/Landing';
+import { Landing } from '@homework-task/components/landing/Landing';
 
 export const App = () => {
     return (

@@ -1,6 +1,5 @@
+import { Card } from '@homework-task/components/landing/Card';
 import clsx from 'clsx';
-
-import { Card } from './Card.jsx';
 
 // eslint-disable-next-line no-undef
 const vscodeProjectLink = `vscode://file/${__CWD__}`;

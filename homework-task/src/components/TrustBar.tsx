@@ -1,5 +1,4 @@
 import Marquee from 'react-fast-marquee';
-import React from 'react';
 
 interface TrustBarProps {
     images: string[];

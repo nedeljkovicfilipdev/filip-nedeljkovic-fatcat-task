@@ -1,12 +1,10 @@
-import React from "react";
-
 interface Item {
-    title: string,
-    description: string
+    title: string;
+    description: string;
 }
 
-interface ItemProps{
-    items: Item[]
+interface ItemProps {
+    items: Item[];
 }
 
 export const ItemsShowcase = ({ items }: ItemProps) => {

@@ -1,13 +1,12 @@
 import clsx from 'clsx';
-import React from 'react';
 
 interface CardProps {
-    title: string,
-    text: string,
-    link: string
+    title: string;
+    text: string;
+    link: string;
 }
 
-export const Card = ({title, text, link} : CardProps) => (
+export const Card = ({ title, text, link }: CardProps) => (
     <div
         className={clsx(
             'flex',
