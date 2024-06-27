@@ -18,12 +18,14 @@ const config = {
         'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
-    settings: {react: {version: '18.2'}, 
-    'import/resolver':{
-        "typescript": {
-          "project": './tsconfig.json',
+    settings: {
+        react: {version: '18.2'},
+        'import/resolver':{
+            "typescript": {
+                "project":'./tsconfig.json'
+            }
         }
-      }},
+    },
     parser: '@typescript-eslint/parser',
     plugins: [
         'react-refresh',
