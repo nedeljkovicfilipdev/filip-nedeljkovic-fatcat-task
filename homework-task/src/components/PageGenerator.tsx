@@ -1,5 +1,8 @@
 import { Hero } from '@homework-task/components/Hero';
-import { LayoutSection } from '@homework-task/types/types';
+import { LayoutSection, ComponentType } from '@homework-task/types/types';
+import { TrustBar } from './TrustBar';
+import { ItemsShowcase } from './ItemsShowcase';
+import { PanelShowcase } from './PanelShowcase';
 
 interface PageGeneratorProps {
     data: LayoutSection[];
@@ -7,22 +10,33 @@ interface PageGeneratorProps {
 
 export const PageGenerator: React.FC<PageGeneratorProps> = ({ data }) => {
     return (
-        <div>
+        <main>
             {data.map((section, index) => (
-                <div
+                <section
                     key={index}
                     style={{ backgroundColor: section.props.backgroundColor }}
                 >
                     {section.components.map((component, idx) => (
-                        <div key={idx}>
-                            {component.type === 'componentHero' && (
-                                <Hero {...component.props} />
-                            )}
-                            {/* Add more component type checks and renders */}
-                        </div>
+                        <div key={idx}>{renderComponent(component)}</div>
                     ))}
-                </div>
+                </section>
             ))}
-        </div>
+        </main>
     );
+};
+
+const renderComponent = (component: { type: ComponentType; props: any }) => {
+    switch (component.type) {
+        case 'componentHero':
+            return <Hero {...component.props} />;
+        case 'componentTrustBar':
+            return <TrustBar {...component.props} />;
+        case 'componentItemsShowcase':
+            return <ItemsShowcase {...component.props} />;
+        case 'componentPanelShowcase':
+            return <PanelShowcase {...component.props} />;
+        // Add cases if needed
+        default:
+            return null;
+    }
 };

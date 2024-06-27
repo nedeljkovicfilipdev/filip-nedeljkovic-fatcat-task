@@ -1,4 +1,4 @@
-type LayoutType = 'layoutSection';
+export type LayoutType = 'layoutSection';
 
 export interface LayoutSection {
     type: LayoutType;
@@ -7,12 +7,12 @@ export interface LayoutSection {
     };
     components: Component[];
 }
-type ComponentType = 'componentHero';
 
-interface Component {
+export type ComponentType = 'componentHero' | 'componentTrustBar' | 'componentItemsShowcase' | 'componentPanelShowcase';
+
+export interface Component {
     type: ComponentType;
     props: {
-        title: string;
-        image: string;
+        [key: string]: any;
     };
 }
