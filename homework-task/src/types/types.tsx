@@ -5,14 +5,35 @@ export interface LayoutSection {
     props: {
         backgroundColor?: string;
     };
-    components: Component[];
+    components: ComponentProps[];
 }
 
-export type ComponentType = 'componentHero' | 'componentTrustBar' | 'componentItemsShowcase' | 'componentPanelShowcase';
-
-export interface Component {
-    type: ComponentType;
-    props: {
-        [key: string]: any;
-    };
+interface HeroProps {
+    title: string;
+    image: string;
 }
+
+interface TrustBarProps {
+    images: string[];
+}
+
+interface ItemsShowcaseProps {
+    items: {
+        title: string;
+        description: string;
+    }[];
+}
+
+interface PanelShowcaseProps {
+    items: {
+        title: string;
+        description: string;
+        image: string;
+    }[];
+}
+
+export type ComponentProps =
+    | { type: 'componentHero'; props: HeroProps }
+    | { type: 'componentTrustBar'; props: TrustBarProps }
+    | { type: 'componentItemsShowcase'; props: ItemsShowcaseProps }
+    | { type: 'componentPanelShowcase'; props: PanelShowcaseProps };

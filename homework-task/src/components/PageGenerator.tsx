@@ -1,13 +1,12 @@
 import { Hero } from '@homework-task/components/Hero';
-import { LayoutSection, ComponentType } from '@homework-task/types/types';
-import { TrustBar } from './TrustBar';
-import { ItemsShowcase } from './ItemsShowcase';
-import { PanelShowcase } from './PanelShowcase';
+import { ItemsShowcase } from '@homework-task/components/ItemsShowcase';
+import { PanelShowcase } from '@homework-task/components/PanelShowcase';
+import { TrustBar } from '@homework-task/components/TrustBar';
+import { ComponentProps, LayoutSection } from '@homework-task/types/types';
 
 interface PageGeneratorProps {
     data: LayoutSection[];
 }
-
 export const PageGenerator: React.FC<PageGeneratorProps> = ({ data }) => {
     return (
         <main>
@@ -25,7 +24,7 @@ export const PageGenerator: React.FC<PageGeneratorProps> = ({ data }) => {
     );
 };
 
-const renderComponent = (component: { type: ComponentType; props: any }) => {
+const renderComponent = (component: ComponentProps) => {
     switch (component.type) {
         case 'componentHero':
             return <Hero {...component.props} />;

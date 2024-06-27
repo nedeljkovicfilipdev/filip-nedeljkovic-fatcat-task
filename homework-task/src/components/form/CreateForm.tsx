@@ -1,5 +1,6 @@
 import { Controller, Control, FieldErrors } from 'react-hook-form';
 import { z } from 'zod';
+
 import { FormGenerator } from './FormGenerator';
 
 const validationSchema = z.object({
@@ -32,7 +33,7 @@ export const CreateForm = () => {
                 <Controller
                     name="title"
                     control={control}
-                    defaultValue=''
+                    defaultValue=""
                     render={({ field }) => (
                         <input
                             {...field}
@@ -49,7 +50,7 @@ export const CreateForm = () => {
                 <Controller
                     name="body"
                     control={control}
-                    defaultValue=''
+                    defaultValue=""
                     render={({ field }) => (
                         <textarea
                             {...field}

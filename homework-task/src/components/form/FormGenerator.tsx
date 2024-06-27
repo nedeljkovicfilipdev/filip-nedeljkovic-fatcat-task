@@ -61,7 +61,11 @@ export const FormGenerator = <T extends FieldValues>({
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form
+                onSubmit={() => {
+                    void handleSubmit(onSubmit);
+                }}
+            >
                 {renderForm({ control, errors })}
                 <button
                     type="submit"

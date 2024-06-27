@@ -50,19 +50,23 @@ export const data: LayoutSection[] = [
                     items: [
                         {
                             title: 'Item 1',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                         },
                         {
                             title: 'Item 2',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                         },
                         {
                             title: 'Item 3',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                         },
                         {
                             title: 'Item 4',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                         },
                     ],
                 },
@@ -79,22 +83,26 @@ export const data: LayoutSection[] = [
                     items: [
                         {
                             title: 'Panel 1',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                             image: '/media/cats/cat_7.png',
                         },
                         {
                             title: 'Panel 2',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                             image: '/media/cats/cat_8.png',
                         },
                         {
                             title: 'Panel 3',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                             image: '/media/cats/cat_9.png',
                         },
                         {
                             title: 'Panel 3',
-                            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                            description:
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                             image: '/media/cats/cat_10.png',
                         },
                     ],
