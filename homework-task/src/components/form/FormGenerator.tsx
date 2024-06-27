@@ -36,7 +36,7 @@ export const FormGenerator = <T extends FieldValues>({
         formState: { errors },
     } = useForm<T>({
         resolver: zodResolver(validationSchema),
-        defaultValues: {} as DefaultValues<T>, // Use an empty object as defaultValues for type safety
+        defaultValues: {} as DefaultValues<T>,
     });
 
     const mutation = useMutation(
@@ -60,29 +60,27 @@ export const FormGenerator = <T extends FieldValues>({
     };
 
     return (
-        <form
-            onSubmit={() => {
-                handleSubmit(onSubmit);
-            }}
-        >
-            {renderForm({ control, errors })}
-            <button
-                type="submit"
-                disabled={mutation.isLoading}
-                className="bg-blue-500 text-white p-2 rounded mt-4"
-                style={{
-                    backgroundColor: 'blue',
-                    color: 'white',
-                    padding: '8px 16px',
-                    borderRadius: '4px',
-                    marginTop: '16px',
-                }}
-            >
-                {mutation.isLoading ? 'Submitting...' : 'Submit'}
-            </button>
+        <div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                {renderForm({ control, errors })}
+                <button
+                    type="submit"
+                    disabled={mutation.isLoading}
+                    className="bg-blue-500 text-white p-2 rounded mt-4"
+                    style={{
+                        backgroundColor: 'blue',
+                        color: 'white',
+                        padding: '8px 16px',
+                        borderRadius: '4px',
+                        marginTop: '16px',
+                    }}
+                >
+                    {mutation.isLoading ? 'Submitting...' : 'Submit'}
+                </button>
+            </form>
             {mutation.isError && (
                 <p className="text-red-500">Error submitting form</p>
             )}
-        </form>
+        </div>
     );
 };
