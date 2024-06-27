@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-
-import clsx from 'clsx';
+import { useState, useEffect } from 'react';
 
 import axios from 'axios';
+import clsx from 'clsx';
 
 interface User {
     id: number;
@@ -12,7 +11,7 @@ interface User {
     phone: string;
 }
 
-const UserList: React.FC = () => {
+export const UserList = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -75,5 +74,3 @@ const UserList: React.FC = () => {
         </div>
     );
 };
-
-export default UserList;
