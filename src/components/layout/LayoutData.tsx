@@ -100,7 +100,7 @@ export const data: LayoutSection[] = [
                             image: '/media/cats/cat_9.png',
                         },
                         {
-                            title: 'Panel 3',
+                            title: 'Panel 4',
                             description:
                                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                             image: '/media/cats/cat_10.png',
