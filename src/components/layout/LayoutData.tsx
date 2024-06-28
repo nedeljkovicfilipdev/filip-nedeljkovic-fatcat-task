@@ -1,5 +1,3 @@
-// src/layoutData.ts
-
 import { LayoutSection } from '@homework-task/types/types';
 
 export const data: LayoutSection[] = [

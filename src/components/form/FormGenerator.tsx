@@ -19,7 +19,7 @@ interface PostResponse {
     userId: number;
 }
 
-const FormGenerator = <T extends FieldValues>({
+export const FormGenerator = <T extends FieldValues>({
     validationSchema,
     renderForm,
 }: FormGeneratorProps<T>) => {
@@ -78,5 +78,3 @@ const FormGenerator = <T extends FieldValues>({
         </form>
     );
 };
-
-export default FormGenerator;

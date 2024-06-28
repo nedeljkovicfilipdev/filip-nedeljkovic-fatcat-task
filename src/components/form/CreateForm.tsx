@@ -1,7 +1,7 @@
 import { Controller, Control, FieldErrors } from 'react-hook-form';
 import { z } from 'zod';
 
-import FormGenerator from './FormGenerator';
+import { FormGenerator } from '@homework-task/components/form/FormGenerator';
 
 const validationSchema = z.object({
     title: z
@@ -92,5 +92,3 @@ export const CreateForm = () => {
         </div>
     );
 };
-
-export default CreateForm;
