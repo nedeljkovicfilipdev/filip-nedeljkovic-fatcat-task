@@ -4,14 +4,14 @@ This project involves converting a JavaScript codebase to TypeScript, implementi
 
 #Installation
 
-Clone the Repository:
+###Clone the Repository:
 git clone https://github.com/nedeljkovicfilipdev/filip-nedeljkovic-fatcat-task.git
 
-Navigate to the Project Directory
+###Navigate to the Project Directory
 cd filip-nedeljkovic-fatcat-task
 
-Install Dependencies
+###Install Dependencies
 npm install
 
-Start the Project
+###Start the Project
 npm run dev
