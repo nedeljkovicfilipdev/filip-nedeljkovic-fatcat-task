@@ -53,7 +53,7 @@ const FormGenerator = <T extends FieldValues>({
             onSubmit={(e) => {
                 e.preventDefault();
                 handleSubmit(onSubmit)().catch((err: Error) => {
-                    // Handle error, e.g., log it or show a message to the user
+                    // Handle error, alert user
                     const errorMessage =
                         err instanceof Error
                             ? err.message

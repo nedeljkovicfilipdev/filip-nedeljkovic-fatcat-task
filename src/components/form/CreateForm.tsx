@@ -6,11 +6,11 @@ import FormGenerator from './FormGenerator';
 const validationSchema = z.object({
     title: z
         .string()
-        .max(50, 'Title must be 50 characters or less')
+        .max(20, 'Title must be 20 characters or less')
         .min(1, 'Title is required'),
     body: z
         .string()
-        .max(200, 'Body must be 200 characters or less')
+        .max(100, 'Body must be 100 characters or less')
         .min(1, 'Body is required'),
 });
 

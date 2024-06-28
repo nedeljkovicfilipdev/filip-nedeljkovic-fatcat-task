@@ -11,6 +11,38 @@ interface User {
     phone: string;
 }
 
+interface UserItemProps {
+    user: User;
+}
+
+const UserListItem = ({ user }: UserItemProps) => {
+    return (
+        <li
+            key={user.id}
+            className={clsx(
+                'p-4 border rounded-lg shadow-md',
+                'hover:bg-gray-100 transition duration-200'
+            )}
+        >
+            <p>
+                <strong>ID:</strong> {user.id}
+            </p>
+            <p>
+                <strong>Name:</strong> {user.name}
+            </p>
+            <p>
+                <strong>Username:</strong> {user.username}
+            </p>
+            <p>
+                <strong>Email:</strong> {user.email}
+            </p>
+            <p>
+                <strong>Phone:</strong> {user.phone}
+            </p>
+        </li>
+    );
+};
+
 export const UserList = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
@@ -21,24 +53,32 @@ export const UserList = () => {
             .get<User[]>('https://jsonplaceholder.typicode.com/users')
             .then((response) => {
                 setUsers(response.data);
-                setLoading(false);
             })
             .catch((error: unknown) => {
                 if (axios.isAxiosError(error)) {
                     setError(error.message);
-                } else {
-                    setError('An unexpected error occurred');
                 }
+                setError('An unexpected error occurred');
+            })
+            .finally(() => {
                 setLoading(false);
             });
     }, []);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return (
+            <div>
+                <span>Loading...</span>
+            </div>
+        );
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return (
+            <div>
+                <span>Error: {error}</span>
+            </div>
+        );
     }
 
     return (
@@ -46,29 +86,7 @@ export const UserList = () => {
             <h1 className="text-2xl font-bold mb-4 text-center">User List</h1>
             <ul className="space-y-4">
                 {users.map((user) => (
-                    <li
-                        key={user.id}
-                        className={clsx(
-                            'p-4 border rounded-lg shadow-md',
-                            'hover:bg-gray-100 transition duration-200'
-                        )}
-                    >
-                        <p>
-                            <strong>ID:</strong> {user.id}
-                        </p>
-                        <p>
-                            <strong>Name:</strong> {user.name}
-                        </p>
-                        <p>
-                            <strong>Username:</strong> {user.username}
-                        </p>
-                        <p>
-                            <strong>Email:</strong> {user.email}
-                        </p>
-                        <p>
-                            <strong>Phone:</strong> {user.phone}
-                        </p>
-                    </li>
+                    <UserListItem key={user.id} user={user} />
                 ))}
             </ul>
         </div>
